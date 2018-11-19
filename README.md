@@ -1,44 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The goal
 
-## Available Scripts
+The goal is to write a small application that displays avatars of a predefined set of users like this:
 
-In the project directory, you can run:
+    [image1]      [image2]       [image3]        [image4]
+    [image5]      [image6]       ...
 
-### `npm start`
+The problem is that in order to get a user's avatar URL we have to make a GET request to the backend. For example, for the user with ID=2 we request `https://picurl.herokuapp.com/users/2` and receive this JSON response:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    {
+    	url: "https://picsum.photos/400/400?image=29"
+    }
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+then we display the image with this returned URL.
 
-### `npm test`
+(For the user with ID=11 we would request `https://picurl.herokuapp.com/users/11`, and so on)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app needs to display users with these IDs: 2, 7, 1, 8, 3, 9.
 
-### `npm run build`
+// The actual images are just random stock photos, don't worry about that :)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bonus points
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+These additions are not necessary, do them only if you feel like it:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The images are 400x400 pixels; can we display them as 80x80 pixels?
+- Could we also display them as circles, not squares?
 
-### `npm run eject`
+## Sending the code
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+It's not necessary to send the whole app, just the minimal code, or a Github link, or a codesandbox link (https://codesandbox.io/s/new), or any other way that would be easy for you.
